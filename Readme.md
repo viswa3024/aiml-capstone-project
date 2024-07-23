@@ -17,14 +17,24 @@ This project aims to generate email subject lines by leveraging generative model
 
 | Model            | ROUGE-1                | ROUGE-2                | ROUGE-L                |
 |------------------|------------------------|------------------------|------------------------|
+| GPT-2            | 0.1409                 | 0.0353                 | 0.1361                 |
 | BART Base        | 0.3738                 | 0.2444                 | 0.3665                 |
 | BART Large-CNN   | 0.3257                 | 0.2800                 | 0.3257                 |
-| GPT-2            | 0.1409                 | 0.0353                 | 0.1361                 |
 | T5 Small         | 0.1835                 | 0.0866                 | 0.1732                 |
 | T5 Base          | 0.0985                 | 0.0353                 | 0.0959                 |
 
 ![alt text](rouge_scores.png)
 
+
+
+
+#### ROUGE Scores Explanation:
+
+- **ROUGE-1** measures the overlap of unigrams (single words) between the generated and reference summaries. Higher scores indicate better performance in capturing essential words.
+
+- **ROUGE-2** evaluates the overlap of bigrams (two consecutive words). It provides insight into how well the model captures pairs of words.
+
+- **ROUGE-L** assesses the longest common subsequence between the generated and reference summaries. It reflects the fluency and coherence of the generated text.
 
 ### Model Information:
 
