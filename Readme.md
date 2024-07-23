@@ -1,3 +1,5 @@
+![alt text](logo.png)
+
 # AI-based Generative QA System
 
 ### Project Overview: Email Subject Line Generation
@@ -38,35 +40,40 @@ This project aims to generate email subject lines by leveraging generative model
 
 ### Model Information:
 
+#### GPT-2:
+1. **Architecture**: Generative Pre-trained Transformer 2.
+2. **Training**: Trained on a diverse dataset for generating text.
+3. **Strengths**: Good for creative and diverse text generation.
+4. **Evaluation**: Lower ROUGE scores compared to BART models, but useful for generating varied outputs.
+5. **Reference**: [GPT-2 on Hugging Face](https://huggingface.co/openai-community/gpt2)
+
 #### BART Base:
 1. **Architecture**: Bidirectional and Auto-Regressive Transformers.
 2. **Training**: Pretrained on a large corpus of text and fine-tuned for summarization tasks.
 3. **Usage**: Effective for generating coherent and fluent summaries.
 4. **Evaluation**: High ROUGE scores, indicating good performance in generating relevant subject lines.
+5. **Reference**: [BART Base on Hugging Face](https://huggingface.co/facebook/bart-base)
 
 #### BART Large-CNN:
 1. **Architecture**: Larger variant of BART with more parameters.
 2. **Training**: Pretrained and fine-tuned for text summarization.
 3. **Performance**: Balances recall and precision well, with high ROUGE scores.
 4. **Usage**: Suitable for generating detailed and accurate summaries.
-
-#### GPT-2:
-1. **Architecture**: Generative Pre-trained Transformer 2.
-2. **Training**: Trained on a diverse dataset for generating text.
-3. **Strengths**: Good for creative and diverse text generation.
-4. **Evaluation**: Lower ROUGE scores compared to BART models, but useful for generating varied outputs.
+5. **Reference**: [BART Large-CNN on Hugging Face](https://huggingface.co/facebook/bart-large-cnn)
 
 #### T5 Small:
 1. **Architecture**: Text-To-Text Transfer Transformer.
 2. **Training**: Converts all tasks to a text-to-text format.
 3. **Efficiency**: Smaller model, faster inference.
 4. **Performance**: Moderate ROUGE scores, balancing speed and accuracy.
+5. **Reference**: [T5 Small on Hugging Face](https://huggingface.co/google-t5/t5-small)
 
 #### T5 Base:
 1. **Architecture**: Larger than T5 Small, with more parameters.
 2. **Training**: Pretrained on a vast corpus and fine-tuned for specific tasks.
 3. **Performance**: Provides a good balance of speed and accuracy.
 4. **Usage**: Suitable for various text generation tasks with reasonable efficiency.
+5. **Reference**: [T5 Base on Hugging Face](https://huggingface.co/google-t5/t5-base)
 
 
 
