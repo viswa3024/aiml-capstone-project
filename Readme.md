@@ -18,7 +18,6 @@ This project aims to generate email subject lines by leveraging generative model
 ### ROUGE Scores:
 
 | Model            | ROUGE-1                | ROUGE-2                | ROUGE-L                |
-|------------------|Recall|Precision|F1-----|Recall|Precision|F1-----|Recall|Precision|F1-----|
 |------------------|------------------------|------------------------|------------------------|
 | GPT-2            | 0.1409                 | 0.0353                 | 0.1361                 |
 | BART Base        | 0.3738                 | 0.2444                 | 0.3665                 |
@@ -28,7 +27,13 @@ This project aims to generate email subject lines by leveraging generative model
 
 ![alt text](rouge_scores.png)
 
-
+| Model            | ROUGE-1 (Recall) | ROUGE-1 (Precision) | ROUGE-1 (F1) | ROUGE-2 (Recall) | ROUGE-2 (Precision) | ROUGE-2 (F1) | ROUGE-L (Recall) | ROUGE-L (Precision) | ROUGE-L (F1) |
+|------------------|------------------|---------------------|--------------|------------------|---------------------|--------------|------------------|---------------------|--------------|
+| GPT-2            | 0.1409           | 0.0353              | 0.1361       | -                | -                   | -            | -                | -                   | -            |
+| BART Base        | 0.3738           | 0.2444              | 0.3665       | -                | -                   | -            | -                | -                   | -            |
+| BART Large-CNN   | 0.3257           | 0.2800              | 0.3257       | -                | -                   | -            | -                | -                   | -            |
+| T5 Small         | 0.1835           | 0.0866              | 0.1732       | -                | -                   | -            | -                | -                   | -            |
+| T5 Base          | 0.0985           | 0.0353              | 0.0959       | -                | -                   | -            | -                | -                   | -            |
 
 
 #### ROUGE Scores Explanation:
