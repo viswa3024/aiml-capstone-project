@@ -29,7 +29,7 @@ This project aims to generate email subject lines by leveraging generative model
 
 | Model            | ROUGE-1 (Recall) | ROUGE-1 (Precision) | ROUGE-1 (F1) | ROUGE-2 (Recall) | ROUGE-2 (Precision) | ROUGE-2 (F1) | ROUGE-L (Recall) | ROUGE-L (Precision) | ROUGE-L (F1) |
 |------------------|------------------|---------------------|--------------|------------------|---------------------|--------------|------------------|---------------------|--------------|
-| GPT-2            | 0.1409           | 0.0353              | 0.1361       | -                | -                   | -            | -                | -                   | -            |
+| GPT-2            | 0.2989           | 0.1570              | 0.1976       | 0.0819           | 0.0440              | 0.0546       | 0.2523           | 0.1311              | 0.1657       |
 | BART Base        | 0.3738           | 0.2444              | 0.3665       | -                | -                   | -            | -                | -                   | -            |
 | BART Large-CNN   | 0.3257           | 0.2800              | 0.3257       | -                | -                   | -            | -                | -                   | -            |
 | T5 Small         | 0.1835           | 0.0866              | 0.1732       | -                | -                   | -            | -                | -                   | -            |
