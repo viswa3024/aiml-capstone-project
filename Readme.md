@@ -18,6 +18,7 @@ This project aims to generate email subject lines by leveraging generative model
 ### ROUGE Scores:
 
 | Model            | ROUGE-1                | ROUGE-2                | ROUGE-L                |
+|------------------|Recall|Precision|F1-----|Recall|Precision|F1-----|Recall|Precision|F1-----|
 |------------------|------------------------|------------------------|------------------------|
 | GPT-2            | 0.1409                 | 0.0353                 | 0.1361                 |
 | BART Base        | 0.3738                 | 0.2444                 | 0.3665                 |
