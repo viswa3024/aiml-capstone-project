@@ -107,5 +107,17 @@ This project aims to generate email subject lines by leveraging generative model
 
 **Huggingface Spaces**:
 
-   ![image](https://github.com/user-attachments/assets/db46ae67-95bd-4c45-ba43-87d8295ea99c)
+![alt text](results/output.png)
+
+![alt text](results/output1.png)
+
+**Fastapi Output**:
+
+**Request**:
+
+![alt text](results/fastapi_request.png)
+
+**Response**:
+![alt text](results/fastpai_response.png)
+
 
