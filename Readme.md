@@ -85,4 +85,8 @@ This project aims to generate email subject lines by leveraging generative model
 5. **Reference**: [T5 Base on Hugging Face](https://huggingface.co/google-t5/t5-base)
 
 
+**Output for few Emails**:
+
+1. Email : The following reports have been waiting for your approval for more than 4 days.Please review.Owner: James W Reitmeyer Report Name: JReitmeyer 10/24/01 Days In Mgr.Queue: 5
+   Generated Subject: Following report waiting approval
 
