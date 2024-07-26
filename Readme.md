@@ -25,7 +25,7 @@ This project aims to generate email subject lines by leveraging generative model
 | T5 Small         | 0.1835                 | 0.0866                 | 0.1732                 |
 | T5 Base          | 0.0985                 | 0.0353                 | 0.0959                 |
 
-![alt text](rouge_scores.png)
+
 
 | Model            | ROUGE-1 (Recall) | ROUGE-1 (Precision) | ROUGE-1 (F1) | ROUGE-2 (Recall) | ROUGE-2 (Precision) | ROUGE-2 (F1) | ROUGE-L (Recall) | ROUGE-L (Precision) | ROUGE-L (F1) |
 |------------------|------------------|---------------------|--------------|------------------|---------------------|--------------|------------------|---------------------|--------------|
@@ -35,6 +35,9 @@ This project aims to generate email subject lines by leveraging generative model
 | T5 Small         | 0.1835           | 0.0866              | 0.1732       | -                | -                   | -            | -                | -                   | -            |
 | T5 Base          | 0.0985           | 0.0353              | 0.0959       | -                | -                   | -            | -                | -                   | -            |
 
+
+
+![alt text](rouge_scores.png)
 
 #### ROUGE Scores Explanation:
 
