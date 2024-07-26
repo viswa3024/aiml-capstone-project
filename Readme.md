@@ -103,3 +103,9 @@ This project aims to generate email subject lines by leveraging generative model
 
 
    **Generated Subject**: Late october 25th received
+
+
+**Huggingface Spaces**:
+
+   ![image](https://github.com/user-attachments/assets/db46ae67-95bd-4c45-ba43-87d8295ea99c)
+
