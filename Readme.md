@@ -353,8 +353,8 @@ Generated Summary: Meeting to Discuss Power Trading Deals
 [HuggingFace Spaces Gradio app](https://huggingface.co/spaces/kkasiviswanath/aiml_email_subject_line_generation)
 
 
+![alt text](results/output2.png)
 ![alt text](results/output.png)
-
 ![alt text](results/output1.png)
 
 **Fastapi Output**:
