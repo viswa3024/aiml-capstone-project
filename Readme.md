@@ -47,6 +47,17 @@ This project aims to generate email subject lines by leveraging generative model
 
 - **ROUGE-L** assesses the longest common subsequence between the generated and reference summaries. It reflects the fluency and coherence of the generated text.
 
+## Evaluation Metrics
+
+Each of these metrics can be evaluated in terms of:
+
+- **Precision**: The fraction of n-grams in the generated summary that are also in the reference summary.
+
+- **Recall**: The fraction of n-grams in the reference summary that are also in the generated summary.
+
+- **F1 Score**: The harmonic mean of precision and recall, providing a balanced measure.
+
+
 ### Model Information:
 
 #### GPT-2:
