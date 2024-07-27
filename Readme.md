@@ -466,5 +466,15 @@ Each of these metrics can be evaluated in terms of:
     - T5 Base has more parameters than T5 Small, allowing it to perform better on summarization tasks, but still falls short compared to models like BART due to capacity limitations.
 
 
+## Group Details
+
+**Group No:** 17
+
+### Team Members
+- Archit Garg
+- Dinesh
+- Chandrasekhar B
+- K Kasi Viswanath
+
 
 
