@@ -32,7 +32,7 @@ pipe = pipeline("summarization", model="facebook/bart-large-cnn")
 summarize_email(test_df, 0)
 ```
 
-```plain
+```
 Email Body: You have received this message because someone has attempted to send you an email from outside of Enron with an attachment type that Enron does not allow into our messaging environment Your email has been quarantined and is being held at the MailSweeper server Sender sloggansahmassoccom
 
 
@@ -351,6 +351,8 @@ Generated Summary: Meeting to Discuss Power Trading Deals
 **Huggingface Spaces**:
 
 [HuggingFace Spaces Gradio app](https://huggingface.co/spaces/kkasiviswanath/aiml_email_subject_line_generation)
+
+[bart_email_subject_summarizer on Hugging Face](https://huggingface.co/spaces/kkasiviswanath/bart_email_subject_summarizer)
 
 
 ![alt text](results/output2.png)
