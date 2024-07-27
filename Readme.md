@@ -276,7 +276,7 @@ tokenizer.push_to_hub(repo_name)
 
 ```
 
-**Reference**: [bart_email_subject_summarizer on Hugging Face](https://huggingface.co/spaces/kkasiviswanath/bart_email_subject_summarizer)
+**Reference**: [bart_email_subject_summarizer on Hugging Face](https://huggingface.co/kkasiviswanath/bart_summarizer_deploy_v1)
 
 ### Test with Fine tuned model
 
