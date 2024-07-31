@@ -365,6 +365,10 @@ Generated Summary: Meeting to Discuss Power Trading Deals
 **Response**:
 ![alt text](results/fastpai_response.png)
 
+**Sample GUI**
+
+![alt text](results/sample_gui.png)
+
 
 #### ROUGE Scores Explanation:
 
