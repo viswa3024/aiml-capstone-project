@@ -356,6 +356,10 @@ Generated Summary: Meeting to Discuss Power Trading Deals
 ![alt text](results/output.png)
 ![alt text](results/output1.png)
 
+[HuggingFace Spaces Gradio app (gpt2-medium)](https://huggingface.co/spaces/kkasiviswanath/AI-based_Generative_QA_System)
+
+![alt text](results/gpt2_medium.png)
+
 **Fastapi Output**:
 
 **Request**:
