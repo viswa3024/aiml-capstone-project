@@ -604,6 +604,20 @@ Each of these metrics can be evaluated in terms of:
 4. **Evaluation**: Lower ROUGE scores compared to BART models, but useful for generating varied outputs.
 5. **Reference**: [GPT-2 on Hugging Face](https://huggingface.co/openai-community/gpt2)
 
+#### GPT-2 Medium:
+1. **Architecture**: A medium-sized variant of GPT-2 with more parameters.
+2. **Training**: Similar training objectives as GPT-2 but with a larger model size.
+3. **Strengths**: Generates text with better context and coherence compared to GPT-2.
+4. **Evaluation**: Slightly better ROUGE scores than GPT-2, but still lower compared to BART models.
+5. **Reference**: [GPT-2 Medium on Hugging Face](https://huggingface.co/openai-community/gpt2-medium)
+
+#### DistilGPT2:
+1. **Architecture**: A smaller, distilled version of GPT-2.
+2. **Training**: Distilled from GPT-2 to reduce size while retaining most of the performance.
+3. **Efficiency**: Faster and less resource-intensive than GPT-2, with slightly lower performance.
+4. **Evaluation**: Lower ROUGE scores due to reduced capacity, but still effective for generating coherent text.
+5. **Reference**: [DistilGPT2 on Hugging Face](https://huggingface.co/distilbert/distilgpt2)
+
 #### BART Base:
 1. **Architecture**: Bidirectional and Auto-Regressive Transformers.
 2. **Training**: Pretrained on a large corpus of text and fine-tuned for summarization tasks.
@@ -638,26 +652,38 @@ Each of these metrics can be evaluated in terms of:
 1. **Model Architecture**:
     - **BART Base and BART Large-CNN**: These models are based on the BART architecture, which combines bidirectional and autoregressive transformers. This allows BART to capture both the context of words and generate coherent text sequences. The architecture is specifically designed for text generation tasks, making it highly effective for summarization.
 
-    - **GPT-2**: While GPT-2 is a powerful language model, it is primarily autoregressive, meaning it predicts the next word in a sequence based on previous words. This can limit its ability to capture the full context compared to models like BART, which use bidirectional transformers during the encoding phase.
+    - **GPT-2 and GPT-2 Medium**: GPT-2 and its medium variant are powerful language models that are primarily autoregressive, meaning they predict the next word in a sequence based on previous words. This can limit their ability to capture the full context compared to models like BART, which use bidirectional transformers during the encoding phase.
+
+    - **DistilGPT2**: A smaller, distilled version of GPT-2, which retains much of the performance of the original model but with reduced parameters, making it faster and less resource-intensive.
 
     - **T5 Small and T5 Base**: T5 (Text-To-Text Transfer Transformer) models convert all NLP tasks into a text-to-text format, which is a versatile approach. However, the smaller versions of T5 might lack the capacity to capture complex dependencies and nuances as effectively as larger models.
 
 2. **Training Data and Objectives**:
     - **BART**: Pre-trained on large corpora with a denoising autoencoder objective, which involves corrupting text and training the model to reconstruct it. This helps BART learn robust representations and improve its ability to generate coherent and contextually appropriate summaries.
 
-    - **GPT-2**: Trained to predict the next token in a sequence, which is excellent for generating text but may not be as effective for tasks requiring understanding and condensing information, like summarization.
+    - **GPT-2 and GPT-2 Medium**: Trained to predict the next token in a sequence, which is excellent for generating text but may not be as effective for tasks requiring understanding and condensing information, like summarization.
+
+    - **DistilGPT2**: Similarly trained as GPT-2 but distilled to reduce size and improve efficiency, which may lead to slightly lower performance on complex tasks.
 
     - **T5**: Trained on a variety of text-to-text tasks, including summarization. However, the smaller versions may not perform as well due to limited capacity and fewer parameters compared to larger models like BART.
 
 3. **Model Size and Capacity**:
     - **BART Large-CNN**: Larger models with more parameters can capture more complex patterns in data and generate more accurate summaries, leading to higher ROUGE scores. The larger variant of BART has more capacity to understand and generate detailed summaries.
+    
+    - **GPT-2**: The base version of GPT-2 has a moderate number of parameters, making it capable of generating coherent text, but it may struggle with more complex tasks like summarization compared to larger models like BART. Its capacity to capture context is limited compared to more extensive models.
+
+    - **DistilGPT2**: As a distilled version of GPT-2, DistilGPT2 has fewer parameters, which results in faster inference and lower resource requirements. However, this reduction in size also leads to a decrease in the model's ability to capture detailed context, leading to slightly lower performance, especially in tasks requiring nuanced understanding.
+
+    - **GPT-2 Medium**: With more parameters than the base GPT-2, GPT-2 Medium has an improved capacity to understand and generate text with better coherence and context. This makes it more effective in handling complex patterns compared to the base GPT-2, though it still doesn't match the capacity of larger models like BART Large-CNN.
 
     - **T5 Small vs. T5 Base**: The smaller T5 models have fewer parameters and, consequently, less capacity to capture detailed information, leading to lower ROUGE scores compared to larger models.
 
 4. **Pre-training Tasks and Fine-Tuning**:
     - **BART**: Specifically fine-tuned on summarization datasets, making it highly effective for the task. The fine-tuning process helps the model adapt to the nuances of summarization, leading to better performance and higher ROUGE scores.
 
-    - **GPT-2**: While it can be fine-tuned for summarization, its pre-training objective is not specifically tailored for this task, which can result in lower ROUGE scores compared to models pre-trained with summarization in mind.
+    - **GPT-2 and GPT-2 Medium**: While they can be fine-tuned for summarization, their pre-training objective is not specifically tailored for this task, which can result in lower ROUGE scores compared to models pre-trained with summarization in mind.
+
+    - **DistilGPT2**: Fine-tuning DistilGPT2 can improve performance, but the reduced model size may limit its effectiveness compared to larger models like BART.summarization in mind.
 
     - **T5**: The flexibility of T5's text-to-text framework allows for effective fine-tuning, but smaller models may still struggle with capturing detailed information compared to larger models.
 
@@ -673,6 +699,13 @@ Each of these metrics can be evaluated in terms of:
 
 3. **T5 Base vs. T5 Small**:
     - T5 Base has more parameters than T5 Small, allowing it to perform better on summarization tasks, but still falls short compared to models like BART due to capacity limitations.
+
+
+4. **GPT-2 Medium vs. GPT-2**:
+    - GPT-2 Medium, with more parameters than GPT-2, performs better in generating coherent and contextually appropriate text, leading to slightly higher ROUGE scores.
+
+5. **DistilGPT2 vs. GPT-2**:
+    - DistilGPT2, though efficient, may have slightly lower ROUGE scores compared to GPT-2 due to the reduced model size, which affects its capacity to generate detailed text.
 
 
 ## Group Details
