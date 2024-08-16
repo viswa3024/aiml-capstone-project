@@ -18,6 +18,12 @@ The Annotated Enron Subject Line Corpus (AESLC) is used, which consists of clean
 4. **Generative Models**: The project explores the use of various GPT-2 variants and other models like BART and T5 for generating subject lines.
 5. **Evaluation Metrics**: The effectiveness of the generated subject lines is evaluated using metrics such as ROUGE-1, ROUGE-2, and ROUGE-L.
 
+## Email Subject Line Generation project Presentation
+
+The presentation for this project is available at the following link:
+
+[Project Presentation](https://docs.google.com/presentation/d/1DaZfVFC6CknkIvHJB2eKMdVmqJsShf-H/pub?start=true&loop=false&delayms=3000
+
 
 ## AESLC data Preprocessing
 
