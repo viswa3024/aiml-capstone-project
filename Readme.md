@@ -580,6 +580,24 @@ Generated Summary: Meeting to Discuss Power Trading Deals
 ![alt text](results/sample_gui.png)
 
 
+### Deployment links
+
+The deployment of the email subject line generation model using Hugging Face and Gradio can be found in the following directory:
+
+[Hugging Face Gradio Deployment](https://github.com/viswa3024/aiml-capstone-project-email/tree/main/email-subject/deployment/huggingface-gradio/aiml_email_subject_line_generation)
+
+### FastAPI
+
+The FastAPI implementation for the project is available at:
+
+[FastAPI Repository](https://github.com/viswa3024/chat-bot-api)
+
+### GUI
+
+The graphical user interface (GUI) for interacting with the model is hosted here:
+
+[Chat Bot UI](https://github.com/viswa3024/chat-bot-ui)
+
 #### ROUGE Scores Explanation:
 
 - **ROUGE-1** measures the overlap of unigrams (single words) between the generated and reference summaries. Higher scores indicate better performance in capturing essential words.
