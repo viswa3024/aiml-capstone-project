@@ -524,6 +524,8 @@ Generated Summary: Meeting to Discuss Power Trading Deals
 
 ![alt text](results/rouge_scores.png)
 
+![alt text](results/rouge_scores_1.png)
+
 
 ## Output for few Emails:
 
