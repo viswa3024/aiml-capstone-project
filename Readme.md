@@ -87,6 +87,204 @@ trainer.train()
 | 2     | 0.087900      | 0.091184        |
 | 3     | 0.078900      | 0.091783        |
 
+#### distilgpt2 Training Arguments
+
+```python
+
+# Initialize tokenizer and model
+tokenizer = GPT2Tokenizer.from_pretrained('distilgpt2', bos_token='<|startoftext|>',
+                                          eos_token='<|endoftext|>', pad_token='<|pad|>', sep_token='<|sep|>')
+model = GPT2LMHeadModel.from_pretrained('distilgpt2').cuda()
+model.resize_token_embeddings(len(tokenizer))
+
+datacollator = DataCollatorForLanguageModeling(tokenizer = tokenizer, mlm=False)
+
+# Training arguments
+training_args = TrainingArguments(
+    output_dir='./results',
+    overwrite_output_dir=True,
+    num_train_epochs=15,
+    per_device_train_batch_size=8,
+    per_device_eval_batch_size=16,
+    #eval_steps = 2,
+    eval_steps = 400,
+    save_steps=800,
+    warmup_steps=500,
+    load_best_model_at_end=True,
+    #evaluation_strategy="steps",
+    #save_strategy = "steps",
+    eval_strategy="epoch",
+    save_strategy = "epoch",
+    weight_decay=0.01,
+    metric_for_best_model = "rougeL",
+    gradient_accumulation_steps=4,
+    gradient_checkpointing=True,
+    fp16=True,
+    logging_dir='./logs',
+    logging_steps=500,
+    report_to = 'none'
+    )
+
+def compute_metrics(eval_pred, eval_dataset, df):
+    decoded_preds = []
+    references = [df['Subject'], df['Ann0'], df['Ann1'], df['Ann2']]
+    refs = []
+
+    for i, sample_input in enumerate(eval_dataset):
+        temp_input = sample_input[0][sample_input[0] !=torch.Tensor(np.array([50259]))]
+        temp_input = temp_input[None, :]
+        metric_outputs = model.generate(temp_input.cuda(), min_new_tokens = 4, max_new_tokens = 12, num_beams=5, early_stopping=True, num_return_sequences=1, pad_token_id=tokenizer.eos_token_id)
+        decoded_preds.append(tokenizer.decode(metric_outputs[0]))
+
+    final_preds =[]
+    for j in range(len(decoded_preds)):
+        lst = decoded_preds[j].split('<|sep|>')
+        if (len(lst) >= 2):
+            final_preds.append(lst[1].replace("<|endoftext|>",""))
+        temp_refs = []
+        for k in range(len(references)):
+            temp_refs.append(references[k][j])
+        refs.append(temp_refs)
+
+    results_sacrebleu = sacrebleu.compute(predictions=final_preds, references=refs, lowercase = True)
+
+    results_rouge = rouge.compute(predictions=final_preds, references=refs)
+
+    results_meteor = meteor.compute(predictions=final_preds, references=refs)
+
+    return {'bleu': results_sacrebleu['score'], 'rouge1' : results_rouge['rouge1'], 'rouge2' : results_rouge['rouge2'], 'rougeL' : results_rouge['rougeL'], 'meteor' : results_meteor['meteor']}
+
+def preprocess_logits_for_metrics(logits, labels):
+    """
+    Original Trainer may have a memory leak.
+    This is a workaround to avoid storing too many tensors that are not needed.
+    """
+    pred_ids = torch.argmax(logits, dim=-1)
+    return pred_ids, labels
+
+# Trainer
+trainer = Trainer(model=model, args=training_args, train_dataset=train_dataset, eval_dataset=val_dataset, data_collator=datacollator, compute_metrics = lambda pred: compute_metrics(pred, val_dataset, df_val), preprocess_logits_for_metrics = preprocess_logits_for_metrics)
+
+# Fine-tuning the model
+trainer.train()
+
+```
+
+| Epoch | Training Loss | Validation Loss | Bleu     | Rouge1   | Rouge2   | Rougel   | Meteor   |
+|-------|---------------|-----------------|----------|----------|----------|----------|----------|
+| 0     | No log        | 3.635086        | 22.275357| 0.396282 | 0.257464 | 0.387752 | 0.349411 |
+| 1     | 9.029100      | 3.502780        | 25.557314| 0.450736 | 0.291413 | 0.440516 | 0.391040 |
+| 2     | 3.497900      | 3.452860        | 26.260277| 0.453120 | 0.290963 | 0.443728 | 0.390699 |
+| 4     | 3.229800      | 3.391281        | 25.545666| 0.458376 | 0.291450 | 0.447598 | 0.397724 |
+| 5     | 3.150500      | 3.382005        | 25.043569| 0.445259 | 0.278428 | 0.435483 | 0.382040 |
+| 6     | 3.072000      | 3.370845        | 24.800867| 0.446951 | 0.282857 | 0.437950 | 0.388445 |
+| 8     | 2.981300      | 3.362299        | 25.697474| 0.449789 | 0.284316 | 0.441184 | 0.388667 |
+| 9     | 2.934100      | 3.364068        | 25.153556| 0.453883 | 0.286736 | 0.444161 | 0.392419 |
+| 10    | 2.934100      | 3.367672        | 24.701893| 0.448453 | 0.282733 | 0.438903 | 0.388467 |
+| 12    | 2.880000      | 3.372470        | 24.452949| 0.442268 | 0.276134 | 0.432714 | 0.380930 |
+| 13    | 2.852600      | 3.364959        | 24.576658| 0.445328 | 0.277127 | 0.435705 | 0.384882 |
+| 14    | 2.846500      | 3.371709        | 24.588771| 0.444948 | 0.277517 | 0.435337 | 0.384406 |
+
+#### GPT-2-Medium Training Arguments
+
+```python
+
+# Initialize tokenizer and model
+tokenizer = GPT2Tokenizer.from_pretrained('gpt2-medium', bos_token='<|startoftext|>',
+                                          eos_token='<|endoftext|>', pad_token='<|pad|>', sep_token='<|sep|>')
+model = GPT2LMHeadModel.from_pretrained('gpt2-medium').cuda()
+model.resize_token_embeddings(len(tokenizer))
+
+datacollator = DataCollatorForLanguageModeling(tokenizer = tokenizer, mlm=False)
+
+# Training arguments
+training_args = TrainingArguments(
+    output_dir='./results',
+    overwrite_output_dir=True,
+    num_train_epochs=15,
+    per_device_train_batch_size=8,
+    per_device_eval_batch_size=16,
+    #eval_steps = 2,
+    eval_steps = 400,
+    save_steps=800,
+    warmup_steps=500,
+    load_best_model_at_end=True,
+    #evaluation_strategy="steps",
+    #save_strategy = "steps",
+    eval_strategy="epoch",
+    save_strategy = "epoch",
+    weight_decay=0.01,
+    metric_for_best_model = "rougeL",
+    gradient_accumulation_steps=4,
+    gradient_checkpointing=True,
+    fp16=True,
+    logging_dir='./logs',
+    logging_steps=500,
+    report_to = 'none',
+    save_total_limit = 1
+    )
+
+def compute_metrics(eval_pred, eval_dataset, df):
+    decoded_preds = []
+    references = [df['Subject'], df['Ann0'], df['Ann1'], df['Ann2']]
+    refs = []
+
+    for i, sample_input in enumerate(eval_dataset):
+        temp_input = sample_input[0][sample_input[0] !=torch.Tensor(np.array([50259]))]
+        temp_input = temp_input[None, :]
+        metric_outputs = model.generate(temp_input.cuda(), min_new_tokens = 4, max_new_tokens = 12, num_beams=5, early_stopping=True, num_return_sequences=1, pad_token_id=tokenizer.eos_token_id)
+        decoded_preds.append(tokenizer.decode(metric_outputs[0]))
+
+    final_preds =[]
+    for j in range(len(decoded_preds)):
+        lst = decoded_preds[j].split('<|sep|>')
+        if (len(lst) >= 2):
+            final_preds.append(lst[1].replace("<|endoftext|>",""))
+        temp_refs = []
+        for k in range(len(references)):
+            temp_refs.append(references[k][j])
+        refs.append(temp_refs)
+
+    results_sacrebleu = sacrebleu.compute(predictions=final_preds, references=refs, lowercase = True)
+
+    results_rouge = rouge.compute(predictions=final_preds, references=refs)
+
+    results_meteor = meteor.compute(predictions=final_preds, references=refs)
+
+    return {'bleu': results_sacrebleu['score'], 'rouge1' : results_rouge['rouge1'], 'rouge2' : results_rouge['rouge2'], 'rougeL' : results_rouge['rougeL'], 'meteor' : results_meteor['meteor']}
+
+def preprocess_logits_for_metrics(logits, labels):
+    """
+    Original Trainer may have a memory leak.
+    This is a workaround to avoid storing too many tensors that are not needed.
+    """
+    pred_ids = torch.argmax(logits, dim=-1)
+    return pred_ids, labels
+
+# Trainer
+trainer = Trainer(model=model, args=training_args, train_dataset=train_dataset, eval_dataset=val_dataset, data_collator=datacollator, compute_metrics = lambda pred: compute_metrics(pred, val_dataset, df_val), preprocess_logits_for_metrics = preprocess_logits_for_metrics)
+
+# Fine-tuning the model
+trainer.train()
+
+```
+
+| Epoch | Training Loss | Validation Loss | Bleu     | Rouge1   | Rouge2   | Rougel   | Meteor   |
+|-------|---------------|-----------------|----------|----------|----------|----------|----------|
+| 0     | No log        | 3.240009        | 23.335480| 0.438956 | 0.280590 | 0.427356 | 0.376896 |
+| 1     | 9.291000      | 3.115303        | 24.349057| 0.452958 | 0.291251 | 0.439128 | 0.392938 |
+| 2     | 2.974400      | 3.067280        | 26.348562| 0.464540 | 0.301626 | 0.450059 | 0.407104 |
+| 4     | 2.590900      | 3.037925        | 26.490910| 0.460947 | 0.294609 | 0.446197 | 0.402065 |
+| 5     | 2.442400      | 3.039589        | 26.183558| 0.464822 | 0.291021 | 0.449664 | 0.401436 |
+| 6     | 2.320800      | 3.065905        | 25.271196| 0.463833 | 0.291412 | 0.448254 | 0.403242 |
+| 8     | 2.110700      | 3.123140        | 24.627987| 0.444409 | 0.272727 | 0.432048 | 0.383493 |
+| 9     | 2.029000      | 3.100409        | 24.813734| 0.453561 | 0.283925 | 0.439301 | 0.394933 |
+| 10    | 2.029000      | 3.160328        | 24.009993| 0.444062 | 0.268069 | 0.429838 | 0.378144 |
+| 12    | 1.907900      | 3.193829        | 23.761859| 0.438667 | 0.267829 | 0.425131 | 0.377799 |
+| 13    | 1.859100      | 3.211579        | 24.451897| 0.435391 | 0.265776 | 0.421576 | 0.371685 |
+| 14    | 1.838900      | 3.220527        | 23.986481| 0.434484 | 0.264097 | 0.420290 | 0.372747 |
+
+
 
 #### BART Base Training Arguments
 
