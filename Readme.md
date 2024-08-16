@@ -18,6 +18,13 @@ The Annotated Enron Subject Line Corpus (AESLC) is used, which consists of clean
 4. **Generative Models**: The project explores the use of various GPT-2 variants and other models like BART and T5 for generating subject lines.
 5. **Evaluation Metrics**: The effectiveness of the generated subject lines is evaluated using metrics such as ROUGE-1, ROUGE-2, and ROUGE-L.
 
+
+## AESLC data Preprocessing
+
+The preprocessing for the emails subjects is done in a Jupyter Notebook. You can find the detailed preprocessing steps in the following notebook:
+
+[Preprocessing Notebook](https://github.com/viswa3024/aiml-capstone-project-email/blob/main/email-subject/pre-process/email_subject_pre_process_v1.ipynb)
+
 ### Model test with Zero Shot Inferencing
 
 Zero-shot inferencing allows machine learning models to perform tasks without task-specific training, leveraging pre-trained knowledge to handle tasks like text classification, translation, and question answering. This approach saves time and resources, making it ideal for applications where labeled data is scarce or impractical to obtain.
