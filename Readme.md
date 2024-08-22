@@ -741,8 +741,6 @@ Each of these metrics can be evaluated in terms of:
 **Group No:** 17
 
 ### Team Members
-- Archit Garg
-- Dinesh
 - Chandrasekhar B
 - K Kasi Viswanath
 
