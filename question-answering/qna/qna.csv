@@ -340,10 +340,20 @@
 340,What is the architecture of an autoencoder?,The encoder and decoder are fully-connected neural networks with the code layer representing compressed data.,3
 341,How does the encoder contribute to dimensionality reduction in an autoencoder?,The encoder compresses the input into a lower-dimensional code layer.,3
 342,What role does the latent-space representation play in an autoencoder?,The latent-space representation encodes compressed data that the decoder uses to reconstruct the original input.,3
-343,What are the main hyperparameters to set before training an autoencoder?,Code size, number of layers, number of nodes per layer, and loss function.,3
-344,How do denoising autoencoders prevent learning the identity function?,They corrupt the input data and compare the output to the original, not the corrupted input.,3
+343,What are the main hyperparameters to set before training an autoencoder?,Code size, number of layers number of nodes per layer and loss function.,3
+344,How do denoising autoencoders prevent learning the identity function?,They corrupt the input data and compare the output to the original not the corrupted input.,3
 345,What is the key difference between a standard autoencoder and a deep autoencoder?,A deep autoencoder has multiple layers in both the encoder and decoder allowing for more complex feature extraction.,3
 346,How does the code size affect an autoencoder's performance?,Smaller code size results in higher compression and potential information loss while larger size retains more detail.,3
 347,What is the function of the final layer of the encoder in a deep autoencoder?,It compresses input data into a lower-dimensional representation.3
 348,How does the initial layer of the decoder in a deep autoencoder contribute to reconstruction?,It takes the compressed code and begins the process of reconstructing the original data.,3
 349,What applications benefit from using autoencoders?,Anomaly detection, data denoising, image inpainting, and information retrieval.,3
+350,What are Convolutional Neural Networks (CNNs) primarily used for?,CNNs are primarily used for image recognition and classification tasks.,3
+351,How do CNNs learn features from images?,CNNs apply convolutional filters to detect features at various resolutions and complexities.,3
+352,What is the function of the convolution layer in a CNN?,The convolution layer extracts features from input images using filters or kernels.,3
+353,What role does the ReLU activation function play in CNNs?,ReLU activates positive values and zeros out negative values speeding up training and improving performance.,3
+354,How does pooling benefit a CNN?,Pooling reduces the dimensionality of feature maps and helps in retaining important information while decreasing computational load.,3
+355,What is the purpose of padding in convolution operations?,Padding adds extra pixels around the image to control the spatial dimensions of the output feature map.,3
+356,What are the common types of pooling used in CNNs?,Max pooling average pooling and sum pooling are common types of spatial pooling.,3
+357,How does stride affect the convolution process in CNNs?,Stride determines the number of pixels the filter moves during convolution affecting the size of the output feature map.,3
+358,What is the role of the fully connected layer in a CNN?,The fully connected layer combines features from previous layers to produce the final classification or regression output.,3
+359,How do feature maps differ when using various filters on an image?,Different filters create distinct feature maps by detecting various aspects like edges blurs or sharpened details in the image.,3
