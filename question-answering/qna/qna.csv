@@ -357,3 +357,13 @@
 357,How does stride affect the convolution process in CNNs?,Stride determines the number of pixels the filter moves during convolution affecting the size of the output feature map.,3
 358,What is the role of the fully connected layer in a CNN?,The fully connected layer combines features from previous layers to produce the final classification or regression output.,3
 359,How do feature maps differ when using various filters on an image?,Different filters create distinct feature maps by detecting various aspects like edges blurs or sharpened details in the image.,3
+360,What are the main components of a Convolutional Neural Network (CNN)?,A CNN consists of input and output layers and multiple hidden layers including convolutional pooling fully connected and normalization layers.,3
+361,What does parameter sharing in CNNs refer to?,Parameter sharing means that a feature detector applied to one part of an image is used across other parts of the image enhancing efficiency.,3
+362,How does the convolution operation work in a CNN?,The convolution operation involves overlaying a filter on the input performing element-wise multiplication summing the results and sliding the filter according to the stride.,3
+363,What is the purpose of the stride in CNNs?,Stride controls how many cells the filter moves across the input to compute the next value affecting the size of the output feature map.,3
+364,Why is padding used in CNNs?,Padding prevents the reduction in height and width of feature maps through layers and preserves information at the edges of the input image.,3
+365,What is the effect of padding on the dimensions of the output feature map?,Padding maintains the height and width of the feature maps, preventing them from shrinking through successive layers.,3
+366,How does the convolution operation with a filter differ when padding is used?,Padding allows the filter to cover edge pixels ensuring more complete information is retained in the output feature map.,3
+367,What is the total number of multiplications needed in a convolution operation with a 4x4 input and 3x3 filter?,The total number of multiplications is (4x4) x (3x3) = 144.,3
+368,What is the primary benefit of using stride in convolution operations?,Stride reduces the size of the output feature map and controls the overlap of the filter across the input image.,3
+369,How does stride affect the number of operations in a convolution layer?,Stride influences the number of filter positions and thus the total number of multiplications required to compute the feature map.,3
