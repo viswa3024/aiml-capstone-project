@@ -337,3 +337,13 @@
 337,In the context of deep autoencoders, what is the purpose of the final layer of the encoder and the initial layer of the decoder? How do these layers facilitate data reconstruction.,The final encoder layer compresses data into the latent space and the initial decoder layer reconstructs data from this compressed representation facilitating effective data reconstruction.,3
 338,What are some common applications of autoencoders mentioned in the text, and how do they leverage the autoencoder's ability to learn data representations.,Applications include anomaly detection data denoising and image inpainting using autoencoders to learn and apply meaningful data representations.,3
 339,How does the choice of loss function, such as mean squared error or binary crossentropy, impact the training and output of an autoencoder.,The choice of loss function (MSE or binary crossentropy) affects how well the autoencoder learns to reconstruct data and handles different types of input values.,3
+340,What is the architecture of an autoencoder?,The encoder and decoder are fully-connected neural networks with the code layer representing compressed data.,3
+341,How does the encoder contribute to dimensionality reduction in an autoencoder?,The encoder compresses the input into a lower-dimensional code layer.,3
+342,What role does the latent-space representation play in an autoencoder?,The latent-space representation encodes compressed data that the decoder uses to reconstruct the original input.,3
+343,What are the main hyperparameters to set before training an autoencoder?,Code size, number of layers, number of nodes per layer, and loss function.,3
+344,How do denoising autoencoders prevent learning the identity function?,They corrupt the input data and compare the output to the original, not the corrupted input.,3
+345,What is the key difference between a standard autoencoder and a deep autoencoder?,A deep autoencoder has multiple layers in both the encoder and decoder allowing for more complex feature extraction.,3
+346,How does the code size affect an autoencoder's performance?,Smaller code size results in higher compression and potential information loss while larger size retains more detail.,3
+347,What is the function of the final layer of the encoder in a deep autoencoder?,It compresses input data into a lower-dimensional representation.3
+348,How does the initial layer of the decoder in a deep autoencoder contribute to reconstruction?,It takes the compressed code and begins the process of reconstructing the original data.,3
+349,What applications benefit from using autoencoders?,Anomaly detection, data denoising, image inpainting, and information retrieval.,3
