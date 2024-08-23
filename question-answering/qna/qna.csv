@@ -377,3 +377,5 @@
 377,What is the number of parameters for a fully connected layer with 128 input units and 64 output units?,The number of parameters is (128 \times 64) + 64 = 8256(128×64)+64=8256.,3
 378,How does pooling affect the spatial dimensions of the input feature map?,Pooling reduces the spatial dimensions of the feature map by downsampling, which decreases the number of parameters and computation in the network.,3
 379,What is the number of parameters for a convolutional layer with a 5x5 filter applied to an input with 16 channels and 32 filters?,The number of parameters is (5 \times 5 \times 16 + 1) \times 32 = 12,832(5×5×16+1)×32=12832.,3
+380,What is the primary advantage of using Haar features in the Viola-Jones face detector?,Haar features enable rapid feature evaluation using integral images making real-time face detection feasible.,4
+381.How do U-Net’s skip connections contribute to better segmentation performance?,Skip connections in U-Net preserve fine-grained spatial information, improving localization and detail in segmentation tasks.,4
