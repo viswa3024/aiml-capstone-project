@@ -379,3 +379,6 @@
 379,What is the number of parameters for a convolutional layer with a 5x5 filter applied to an input with 16 channels and 32 filters?,The number of parameters is (5 \times 5 \times 16 + 1) \times 32 = 12,832(5×5×16+1)×32=12832.,3
 380,What is the primary advantage of using Haar features in the Viola-Jones face detector?,Haar features enable rapid feature evaluation using integral images making real-time face detection feasible.,4
 381.How do U-Net’s skip connections contribute to better segmentation performance?,Skip connections in U-Net preserve fine-grained spatial information, improving localization and detail in segmentation tasks.,4
+382,What is the primary benefit of using self-attention in transformers over convolutional layers?,Self-attention captures global relationships between elements in a sequence, while convolutional layers primarily capture local patterns.,4
+383,How does self-attention compute the context vector for each position in a sequence?,Self-attention uses a weighted sum of value vectors where weights are derived from the similarity between query and key vectors.,4
+384,
