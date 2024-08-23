@@ -385,3 +385,5 @@
 385,How does positional encoding contribute to transformer models?,Positional encoding provides information about the order of tokens enabling the model to understand sequential relationships in the data.,4
 386,What is the GPU RAM requirement for GPT-3 with 175 billion parameters?,GPT-3 requires approximately 700GB of GPU RAM to store the model.,4
 387,What is a limitation of Low-rank Adaptation (LoRA) in fine-tuning models?,LoRA does not improve inference efficiency or reduce the cost of storing large foundation models.,4
+388,What is the typical maximum number of tokens that can be processed in parallel by a Transformer model?,The typical maximum number of tokens is 4096.,4
+389,Why is multi-head attention used in Transformers?,Multi-head attention allows the model to focus on different parts of the input simultaneously improving its ability to capture diverse features.,4
