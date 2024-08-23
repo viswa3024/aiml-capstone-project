@@ -387,3 +387,5 @@
 387,What is a limitation of Low-rank Adaptation (LoRA) in fine-tuning models?,LoRA does not improve inference efficiency or reduce the cost of storing large foundation models.,4
 388,What is the typical maximum number of tokens that can be processed in parallel by a Transformer model?,The typical maximum number of tokens is 4096.,4
 389,Why is multi-head attention used in Transformers?,Multi-head attention allows the model to focus on different parts of the input simultaneously improving its ability to capture diverse features.,4
+390,What is the primary function of a Generative Adversarial Network (GAN)?,A GAN consists of a generator and a discriminator that play a game to generate data samples that are indistinguishable from real data.,4
+391,What is one limitation of Generative Adversarial Networks (GANs)?,GANs can be challenging to evaluate and may have difficulty matching the performance of full fine-tuning methods.,4
