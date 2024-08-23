@@ -383,3 +383,5 @@
 383,How does self-attention compute the context vector for each position in a sequence?,Self-attention uses a weighted sum of value vectors where weights are derived from the similarity between query and key vectors.,4
 384,Why is multi-head attention used in transformers?,Multi-head attention allows the model to focus on different parts of the sequence simultaneously capturing various types of relationships.,4
 385,How does positional encoding contribute to transformer models?,Positional encoding provides information about the order of tokens enabling the model to understand sequential relationships in the data.,4
+386,What is the GPU RAM requirement for GPT-3 with 175 billion parameters?,GPT-3 requires approximately 700GB of GPU RAM to store the model.,4
+387,What is a limitation of Low-rank Adaptation (LoRA) in fine-tuning models?,LoRA does not improve inference efficiency or reduce the cost of storing large foundation models.,4
