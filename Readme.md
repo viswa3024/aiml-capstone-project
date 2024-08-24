@@ -1,4 +1,4 @@
-![alt text](iiith_logo.png)
+![alt text](logo.png)
 
 # AI-based Generative QA System
 
