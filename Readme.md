@@ -22,7 +22,7 @@ The Annotated Enron Subject Line Corpus (AESLC) is used, which consists of clean
 
 The presentation for this project is available at the following link:
 
-[Project Presentation](https://docs.google.com/presentation/d/1DaZfVFC6CknkIvHJB2eKMdVmqJsShf-H/pub?start=true&loop=false&delayms=3000)
+[Project Presentation](https://docs.google.com/presentation/d/1iCa1x0giIs08pxeTkgjQnlOkj8MNJTVQ/edit?usp=sharing&ouid=113459448125305271774&rtpof=true&sd=true)
 
 
 ## AESLC data Preprocessing
