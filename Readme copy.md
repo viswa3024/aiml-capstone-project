@@ -25,9 +25,7 @@
 8. [Answers for Few Questions](#answers-for-few-questions-for-task-2-question-answering-on-aiml-queries)
 9. [Project Presentation](#project-presentation)
 10. [Deployment Links](#deployment-links)
-    - [Hugging Face Gradio Project Deployment](#huggingface-spaces-for-ai-based-generative-qa-system)
-    - [Hugging Face Gradio Deployment for Task 1](#huggingface-spaces-for-task-1-email-subject-line-generation)
-    - [Hugging Face Gradio Deployment for Task 2](#huggingface-spaces-for-task-2-question-answering-on-aiml-queries)
+    - [Hugging Face Gradio Deployment](#hugging-face-gradio-deployment)
     - [FastAPI](#fastapi)
     - [GUI](#gui)
 11. [ROUGE Scores Explanation](#rouge-scores-explanation)
@@ -387,16 +385,16 @@ Generated Summary: Meeting to Discuss Power Trading Deals
 
    ### ROUGE Scores:
 
-| Model            | ROUGE-1                | ROUGE-2                | ROUGE-L                |
-|------------------|-------------------------|-------------------------|-------------------------|
-| gpt2             | 0.3183                  | 0.1386                  | 0.2713                  |
-| distilgpt2       | 0.2665                  | 0.1163                  | 0.2363                  |
-| gpt2-medium      | 0.3728                  | 0.1749                  | 0.3103                  |
-| bart-large       | 0.5213                  | 0.2832                  | 0.4892                  |
-| t5-base          | 0.5180                  | 0.2653                  | 0.4888                  |
-| flan-t5-base     | 0.5128                  | 0.2448                  | 0.4832                  |
-| flan-t5-small    | 0.4484                  | 0.1855                  | 0.4157                  |
-| roberta-base     | 0.3340                  | 0.2638                  | 0.3340                  |
+   | Model            | ROUGE-1                | ROUGE-2                | ROUGE-L                |
+   |------------------|-------------------------|-------------------------|-------------------------|
+   | GPT-2            | 0.3744                  | 0.1749                  | 0.3103                  |
+   | DistilGPT2       | 0.2665                  | 0.1163                  | 0.2363                  |
+   | GPT-2 Medium     | 0.3744                  | 0.1749                  | 0.3103                  |
+   | BART-large       | 0.5213                  | 0.2832                  | 0.4892                  |
+   | T5-base          | 0.5180                  | 0.2653                  | 0.4888                  |
+   | Flan-T5-base     | 0.5128                  | 0.2448                  | 0.4832                  |
+   | Flan-T5-small    | 0.4484                  | 0.1855                  | 0.4157                  |
+   | RoBERTa-base     | 0.3340                  | 0.2638                  | 0.3340                  |
 
    For detailed code, please refer to the [fine-tuned models](./question-answering).
 
@@ -526,16 +524,16 @@ Generated Answer: Yes, autoencoders can be used for dimensionality reduction by 
 
 ### ROUGE Scores for  Task 2: Question Answering on AIML Queries
 
-| Model            | ROUGE-1                | ROUGE-2                | ROUGE-L                |
-|------------------|-------------------------|-------------------------|-------------------------|
-| gpt2             | 0.3183                  | 0.1386                  | 0.2713                  |
-| distilgpt2       | 0.2665                  | 0.1163                  | 0.2363                  |
-| gpt2-medium      | 0.3728                  | 0.1749                  | 0.3103                  |
-| bart-large       | 0.5213                  | 0.2832                  | 0.4892                  |
-| t5-base          | 0.5180                  | 0.2653                  | 0.4888                  |
-| flan-t5-base     | 0.5128                  | 0.2448                  | 0.4832                  |
-| flan-t5-small    | 0.4484                  | 0.1855                  | 0.4157                  |
-| roberta-base     | 0.3340                  | 0.2638                  | 0.3340                  |3
+ | Model            | ROUGE-1                | ROUGE-2                | ROUGE-L                |
+   |------------------|-------------------------|-------------------------|-------------------------|
+   | GPT-2            | 0.3744                  | 0.1749                  | 0.3103                  |
+   | DistilGPT2       | 0.2665                  | 0.1163                  | 0.2363                  |
+   | GPT-2 Medium     | 0.3744                  | 0.1749                  | 0.3103                  |
+   | BART-large       | 0.5213                  | 0.2832                  | 0.4892                  |
+   | T5-base          | 0.5180                  | 0.2653                  | 0.4888                  |
+   | Flan-T5-base     | 0.5128                  | 0.2448                  | 0.4832                  |
+   | Flan-T5-small    | 0.4484                  | 0.1855                  | 0.4157                  |
+   | RoBERTa-base     | 0.3340                  | 0.2638                  | 0.3340                  |
 
    
 ![alt text](results/rouge_scores.png)
@@ -604,32 +602,17 @@ The presentation for this project is available at the following link:
 
 ## Deployment links
 
-### Huggingface Spaces for AI-based Generative QA System:
-The deployment of the project Email Subject Line Generation model and Question Answering on AIML Queries model using Hugging Face and Gradio can be found in the following directory:
-
-[Hugging Face Gradio project Deployment](./deployment/huggngface-gradio/AI-based_Generative_QA_System)
-
-![alt text](results/project_hf_1.png)
-
-![alt text](results/project_hf_2.png)
-
-### Huggingface Spaces for Task 1: Email Subject Line Generation:
+### Huggingface Spaces Task 1: Email Subject Line Generation:
 
 The deployment of the email subject line generation model using Hugging Face and Gradio can be found in the following directory:
 
 [Hugging Face Gradio Deployment](./email-subject/deployment\huggingface-gradio/aiml_email_subject_line_generation)
 
-![alt text](results/output2.png)
-![alt text](results/output.png)
-![alt text](results/output1.png)
-
-### Huggingface Spaces for Task 2: Question Answering on AIML Queries:
+### Huggingface Spaces Task 2: Question Answering on AIML Queries:
 
 The deployment of the question and answers model using Hugging Face and Gradio can be found in the following directory:
 
 [Hugging Face Gradio Deployment](./question-answering/deployment/huggingface-gradio/Question_Answering_on_AIML_Queries)
-
-![alt text](results/qna_output1.png)
 
 
 
