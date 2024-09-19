@@ -535,12 +535,12 @@ Generated Answer: Yes, autoencoders can be used for dimensionality reduction by 
 | t5-base          | 0.5180                  | 0.2653                  | 0.4888                  |
 | flan-t5-base     | 0.5128                  | 0.2448                  | 0.4832                  |
 | flan-t5-small    | 0.4484                  | 0.1855                  | 0.4157                  |
-| roberta-base     | 0.3340                  | 0.2638                  | 0.3340                  |3
+| roberta-base     | 0.3340                  | 0.2638                  | 0.3340                  |
 
-   
-![alt text](results/rouge_scores.png)
+![alt text](results/qna_rouge_scores.png)
 
-![alt text](results/rouge_scores_1.png)
+![alt text](results/qna_rouge_scores_1.png)
+
 
 
 

@@ -627,9 +627,9 @@ Generated Answer: Yes, autoencoders can be used for dimensionality reduction by 
 
 
 
-![alt text](results/rouge_scores.png)
+![alt text](results/qna_rouge_scores.png)
 
-![alt text](results/rouge_scores_1.png)
+![alt text](results/qna_rouge_scores_1.png)
 
 
 ## Answers for few Questions:
