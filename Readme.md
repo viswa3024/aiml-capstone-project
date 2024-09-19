@@ -646,7 +646,7 @@ The graphical user interface (GUI) for interacting with the model is hosted here
 
 
 
-#### ROUGE Scores Explanation:
+## ROUGE Scores Explanation:
 
 - **ROUGE-1** measures the overlap of unigrams (single words) between the generated and reference summaries. Higher scores indicate better performance in capturing essential words.
 
