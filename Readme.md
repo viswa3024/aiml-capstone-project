@@ -542,8 +542,6 @@ Generated Answer: Yes, autoencoders can be used for dimensionality reduction by 
 ![alt text](results/qna_rouge_scores_1.png)
 
 
-
-
 ## Output for few Emails for Task 1: Email Subject Line Generation:
 
 1. **Email** : The following reports have been waiting for your approval for more than 4 days.Please review.Owner: James W Reitmeyer Report Name: JReitmeyer 10/24/01 Days In Mgr.Queue: 5
