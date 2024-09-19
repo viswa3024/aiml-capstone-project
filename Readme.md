@@ -28,8 +28,8 @@
     - [Hugging Face Gradio Project Deployment](#huggingface-spaces-for-ai-based-generative-qa-system)
     - [Hugging Face Gradio Deployment for Task 1](#huggingface-spaces-for-task-1-email-subject-line-generation)
     - [Hugging Face Gradio Deployment for Task 2](#huggingface-spaces-for-task-2-question-answering-on-aiml-queries)
-    - [FastAPI](#fastapi)
-    - [GUI](#gui)
+    - [Project API (FastAPI)](#project-api-fastapi)
+    - [Project GUI (Nextjs)](#project-gui-nextjs)
 11. [ROUGE Scores Explanation](#rouge-scores-explanation)
 12. [Model Information](#model-information)
 13. [Group Details](#group-details)
@@ -629,33 +629,22 @@ The deployment of the question and answers model using Hugging Face and Gradio c
 
 ![alt text](results/qna_output1.png)
 
-
-
-**Fastapi Output**:
-
-**Request**:
-
-![alt text](results/fastapi_request.png)
-
-**Response**:
-![alt text](results/fastpai_response.png)
-
-**Sample GUI**
-
-![alt text](results/sample_gui.png)
-
-
-### FastAPI
+### Project API (Fastapi):
 
 The FastAPI implementation for the project is available at:
 
 [FastAPI Repository](https://github.com/viswa3024/chat-bot-api)
 
-### GUI
+### Project GUI (Nextjs)
 
 The graphical user interface (GUI) for interacting with the model is hosted here:
 
-[Chat Bot UI](https://github.com/viswa3024/chat-bot-ui)
+[Chat Bot UI Repository](https://github.com/viswa3024/chat-bot-ui)
+
+![alt text](results/nextjs_app_qna_email.png)
+![alt text](results/nextjs_app_qna.png)
+
+
 
 #### ROUGE Scores Explanation:
 
