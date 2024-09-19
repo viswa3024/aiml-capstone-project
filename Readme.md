@@ -665,7 +665,7 @@ Each of these metrics can be evaluated in terms of:
 - **F1 Score**: The harmonic mean of precision and recall, providing a balanced measure.
 
 
-### Model Information:
+## Model Information:
 
 | Model             | Model Name            | Parameters  | Architecture       | Architecture Type | Main Use Case                                      | Open-source      |
 |-------------------|------------------------|-------------|--------------------|-------------------|---------------------------------------------------|------------------|
