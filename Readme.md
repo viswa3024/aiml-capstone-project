@@ -7,8 +7,6 @@
 
 1. [Objective](#objective)
 2. [Project Overview](#project-overview)
-   - [Email Subject Line Generation](#email-subject-line-generation)
-   - [Question Answering on AIML Queries](#question-answering-on-aiml-queries)
 3. [Datasets Preparation](#datasets-preparation)
    - [Email Subject Line Generation](#1-email-subject-line-generation)
    - [Question Answering on AIML Queries](#2-question-answering-on-aiml-queries)
@@ -24,15 +22,16 @@
 7. [Output for Few Emails](#output-for-few-emails-for-task-1-email-subject-line-generation)
 8. [Answers for Few Questions](#answers-for-few-questions-for-task-2-question-answering-on-aiml-queries)
 9. [Project Presentation](#project-presentation)
-10. [Deployment Links](#deployment-links)
+10. [Project Document](#project-document)
+11. [Deployment Links](#deployment-links)
     - [Hugging Face Gradio Project Deployment](#huggingface-spaces-for-ai-based-generative-qa-system)
     - [Hugging Face Gradio Deployment for Task 1](#huggingface-spaces-for-task-1-email-subject-line-generation)
     - [Hugging Face Gradio Deployment for Task 2](#huggingface-spaces-for-task-2-question-answering-on-aiml-queries)
     - [Project API (FastAPI)](#project-api-fastapi)
     - [Project GUI (Nextjs)](#project-gui-nextjs)
-11. [ROUGE Scores Explanation](#rouge-scores-explanation)
-12. [Model Information](#model-information)
-13. [Group Details](#group-details)
+12. [ROUGE Scores Explanation](#rouge-scores-explanation)
+13. [Model Information](#model-information)
+14. [Group Details](#group-details)
 
 ## Objective
 1. Fine-tune a GPT variant model to generate succinct email subjects from email bodies.
@@ -42,12 +41,12 @@
 ## Project Overview
 The project aims to provide hands-on experience with generative text systems through two main tasks:
 
-1. **Email Subject Generation:** 
+### 1. Email Subject Line Generatio:
    - Fine-tune a GPT model using a prepared dataset.
    - Generate succinct email subjects from email bodies.
    - **Additional Learning:** Explore and compare other LLM models such as BERT, T5, and BART to understand their performance in email subject generation. Learn from different architectures to enhance the effectiveness of the GPT model.
 
-2. **AIML Question Answering:**
+### 2. Question Answering on AIML Queries:
    - Create a new dataset for AIML questions.
    - Fine-tune a GPT model to generate answers to these questions.
    - **Additional Learning:** Investigate other LLM models like T5, BERT, and BART for question answering. Compare their results to gain insights into their strengths and weaknesses in handling AIML queries.
@@ -597,7 +596,13 @@ Generated Answer: Yes, autoencoders can be used for dimensionality reduction by 
 
 The presentation for this project is available at the following link:
 
-[Project Presentation](https://docs.google.com/presentation/d/1iCa1x0giIs08pxeTkgjQnlOkj8MNJTVQ/edit?usp=sharing&ouid=113459448125305271774&rtpof=true&sd=true)
+[Project Presentation](https://docs.google.com/presentation/d/1gZTLnaSm4dQsQNT0yNf8a4CxaYU9QRJq/edit?usp=sharing&ouid=118257404674989000632&rtpof=true&sd=true)
+
+## Project Document
+
+The document contains information about the project, covering dataset details, preprocessing steps, training phases, and deployment strategy. It also references relevant research papers to support the methodologies used throughout the project.
+
+[project document](https://drive.google.com/file/d/1_336cy3h-fo5E0SJpaMWcfFiOy2WT4CW/view?usp=sharing)
 
 
 ## Deployment links
