@@ -611,6 +611,7 @@ The document contains information about the project, covering dataset details, p
 The deployment of the project Email Subject Line Generation model and Question Answering on AIML Queries model using Hugging Face and Gradio can be found in the following directory:
 
 [Hugging Face Gradio project Deployment](./deployment/huggngface-gradio/AI-based_Generative_QA_System)
+
 [Hugging Face Gradio app](https://huggingface.co/spaces/kkasiviswanath/AI-based_Generative_QA_System)
 
 ![alt text](results/project_hf_1.png)
